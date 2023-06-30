@@ -21,6 +21,43 @@ class BusinessProfileController extends Controller
     }
 
     /**
+    * Create a business profile
+    *
+    * @header Authorization Bearer
+    * @bodyParam b_name string required
+    * @bodyParam b_address string required
+    * @bodyParam b_phone string required
+    * @bodyParam b_logo file required
+    * @bodyParam b_cac_no string
+    * @bodyParam b_description string required
+    * @bodyParam b_sign file
+
+    * @param  \App\Http\Requests\StoreBusinessProfileRequest  $request
+    * @return \Illuminate\Http\Response
+    */
+   public function createProfile(StoreBusinessProfileRequest $request)
+   {
+       //
+
+       $businessProfile = BusinessProfile::create([
+        'user_id' => $request->user()->id,
+        'b_name' => $request->b_name,
+        'b_address' => $request->b_address,
+        'b_phone' => $request->b_phone,
+        // 'b_logo' => $request->b_logo,
+        'b_cac_no' => $request->b_cac_no,
+        'b_description' => $request->b_description,
+        // 'b_sign' => $request->b_sign,
+       ]);
+
+       return $businessProfile;
+
+
+   }
+
+
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  \App\Http\Requests\StoreBusinessProfileRequest  $request

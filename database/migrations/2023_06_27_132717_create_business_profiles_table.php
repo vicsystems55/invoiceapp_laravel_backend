@@ -19,10 +19,10 @@ class CreateBusinessProfilesTable extends Migration
             $table->string('b_name');
             $table->string('b_address');
             $table->string('b_phone');
-            $table->string('b_logo');
+            $table->string('b_logo')->nullable();
             $table->string('b_cac_no')->nullable();
             $table->string('b_description');
-            $table->string('b_sign');
+            $table->string('b_sign')->nullable();
             $table->timestamps();
         });
     }

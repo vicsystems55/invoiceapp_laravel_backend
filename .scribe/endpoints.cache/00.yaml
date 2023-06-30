@@ -5,110 +5,6 @@ description: ''
 endpoints:
   -
     httpMethods:
-      - GET
-    uri: api/user
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
-    fileParameters: []
-    responses:
-      -
-        status: 401
-        content: '{"message":"Unauthenticated."}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - GET
-    uri: api/v1/test-route
-    metadata:
-      groupName: Endpoints
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: ''
-      description: ''
-      authenticated: false
-      custom: []
-    headers:
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      name:
-        name: name
-        description: 'Must not be greater than 255 characters.'
-        required: true
-        example: osusivekcvwhob
-        type: string
-        custom: []
-      email:
-        name: email
-        description: 'Must be a valid email address. Must not be greater than 255 characters.'
-        required: true
-        example: botsford.ursula@example.org
-        type: string
-        custom: []
-      password:
-        name: password
-        description: 'Must be at least 8 characters.'
-        required: true
-        example: '=`KG|/;\~,X"VOKjN'
-        type: string
-        custom: []
-    cleanBodyParameters:
-      name: osusivekcvwhob
-      email: botsford.ursula@example.org
-      password: '=`KG|/;\~,X"VOKjN'
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"access_token":"2|dP4QIYe3XL5Rd5kUrQsEc1Wj2TYOutCDzat1RElb","user_data":{"name":"osusivekcvwhob","email":"botsford.ursula@example.org","updated_at":"2023-06-27T22:32:52.000000Z","created_at":"2023-06-27T22:32:52.000000Z","id":2},"token_type":"Bearer"}'
-        headers:
-          cache-control: 'no-cache, private'
-          content-type: application/json
-          x-ratelimit-limit: '60'
-          x-ratelimit-remaining: '59'
-          access-control-allow-origin: '*'
-        description: null
-        custom: []
-    responseFields: []
-    auth: []
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
       - POST
     uri: api/v1/register
     metadata:
@@ -116,7 +12,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Create a new account'
       description: ''
       authenticated: false
       custom: []
@@ -130,29 +26,29 @@ endpoints:
     bodyParameters:
       name:
         name: name
-        description: 'Must not be greater than 255 characters.'
+        description: ''
         required: true
-        example: lnlvomsvbbzjdgfmu
+        example: voluptatem
         type: string
         custom: []
       email:
         name: email
-        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        description: ''
         required: true
-        example: cruickshank.lorenzo@example.net
+        example: kuvalis.kaitlin@example.net
         type: string
         custom: []
       password:
         name: password
-        description: 'Must be at least 8 characters.'
+        description: ''
         required: true
-        example: 'v|qOc@ylB"'
+        example: 'Jr64HSrTd}%W+Ov`1/iO'
         type: string
         custom: []
     cleanBodyParameters:
-      name: lnlvomsvbbzjdgfmu
-      email: cruickshank.lorenzo@example.net
-      password: 'v|qOc@ylB"'
+      name: voluptatem
+      email: kuvalis.kaitlin@example.net
+      password: 'Jr64HSrTd}%W+Ov`1/iO'
     fileParameters: []
     responses: []
     responseFields: []
@@ -170,7 +66,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Sign in to an existing account'
       description: ''
       authenticated: false
       custom: []
@@ -181,8 +77,24 @@ endpoints:
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: ''
+        required: true
+        example: amya56@example.com
+        type: string
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: 'rjnvK|Ao6q=<"2ML'
+        type: string
+        custom: []
+    cleanBodyParameters:
+      email: amya56@example.com
+      password: 'rjnvK|Ao6q=<"2ML'
     fileParameters: []
     responses: []
     responseFields: []
@@ -200,19 +112,28 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Validate the OTP sent'
       description: ''
       authenticated: false
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
+      Authorization: Bearer
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
-    bodyParameters: []
-    cleanBodyParameters: []
+    bodyParameters:
+      otp:
+        name: otp
+        description: ''
+        required: true
+        example: accusamus
+        type: string
+        custom: []
+    cleanBodyParameters:
+      otp: accusamus
     fileParameters: []
     responses: []
     responseFields: []
@@ -230,19 +151,280 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Reset OTP sent'
       description: ''
       authenticated: false
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
+      Authorization: Bearer
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
     cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/create/business-profile
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Create a business profile'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: multipart/form-data
+      Accept: application/json
+      Authorization: Bearer
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      b_name:
+        name: b_name
+        description: ''
+        required: true
+        example: a
+        type: string
+        custom: []
+      b_address:
+        name: b_address
+        description: ''
+        required: true
+        example: et
+        type: string
+        custom: []
+      b_phone:
+        name: b_phone
+        description: ''
+        required: true
+        example: debitis
+        type: string
+        custom: []
+      b_logo:
+        name: b_logo
+        description: ''
+        required: true
+        example: null
+        type: file
+        custom: []
+      b_cac_no:
+        name: b_cac_no
+        description: ''
+        required: false
+        example: non
+        type: string
+        custom: []
+      b_description:
+        name: b_description
+        description: ''
+        required: true
+        example: omnis
+        type: string
+        custom: []
+      b_sign:
+        name: b_sign
+        description: ''
+        required: false
+        example: null
+        type: file
+        custom: []
+    cleanBodyParameters:
+      b_name: a
+      b_address: et
+      b_phone: debitis
+      b_cac_no: non
+      b_description: omnis
+    fileParameters:
+      b_logo: null
+      b_sign: null
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/create-billable-item
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Create a billable item'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: multipart/form-data
+      Accept: application/json
+      Authorization: Bearer
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      business_profile_id:
+        name: business_profile_id
+        description: ''
+        required: true
+        example: 10
+        type: integer
+        custom: []
+      image:
+        name: image
+        description: ''
+        required: false
+        example: null
+        type: file
+        custom: []
+      price:
+        name: price
+        description: ''
+        required: true
+        example: 430430434.34
+        type: number
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: true
+        example: 'Harum officia magni iste.'
+        type: string
+        custom: []
+    cleanBodyParameters:
+      business_profile_id: 10
+      price: 430430434.34
+      description: 'Harum officia magni iste.'
+    fileParameters:
+      image: null
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/initialize-invoice
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Initialize an invoice'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Authorization: Bearer
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      invoice_code:
+        name: invoice_code
+        description: 'A generated invoice string from frontend.'
+        required: true
+        example: '90909080809'
+        type: string
+        custom: []
+      type:
+        name: type
+        description: 'Store a newly created resource in storage.'
+        required: true
+        example: voluptatibus
+        type: string
+        custom: []
+    cleanBodyParameters:
+      invoice_code: '90909080809'
+      type: voluptatibus
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/append-to-inoice
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Add an item to invoice'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+      Authorization: Bearer
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      invoice_code:
+        name: invoice_code
+        description: 'A generated invoice string from frontend.'
+        required: true
+        example: '90909080809'
+        type: string
+        custom: []
+      billable_item_id:
+        name: billable_item_id
+        description: ''
+        required: true
+        example: 5
+        type: integer
+        custom: []
+      qty:
+        name: qty
+        description: ''
+        required: true
+        example: 20
+        type: integer
+        custom: []
+      price:
+        name: price
+        description: ''
+        required: false
+        example: 38351636.380541
+        type: number
+        custom: []
+    cleanBodyParameters:
+      invoice_code: '90909080809'
+      billable_item_id: 5
+      qty: 20
+      price: 38351636.380541
     fileParameters: []
     responses: []
     responseFields: []

@@ -10,7 +10,18 @@ use Illuminate\Support\Facades\Hash;
 
 class ApiAuthController extends Controller
 {
-    //
+
+    /**
+    * Create a new account
+    *
+    * @bodyParam name string required
+    * @bodyParam email string required
+    * @bodyParam password string required
+
+    * @return \Illuminate\Http\Response
+    */
+
+
 
     public function register(Request $request)
     {
@@ -79,6 +90,15 @@ class ApiAuthController extends Controller
 
     }
 
+    /**
+    * Sign in to an existing account
+    *
+    * @bodyParam email string required
+    * @bodyParam password string required
+
+    * @return \Illuminate\Http\Response
+    */
+
     public function login(Request $request)
     {
         # code...
@@ -106,6 +126,16 @@ class ApiAuthController extends Controller
 
     }
 
+    /**
+    * Validate the OTP sent
+    * @header Authorization Bearer
+    *
+    * @bodyParam otp string required
+
+
+    * @return \Illuminate\Http\Response
+    */
+
     public function verify_otp(Request $request)
     {
         # code...
@@ -128,6 +158,13 @@ class ApiAuthController extends Controller
 
 
     }
+
+    /**
+    * Reset OTP sent
+    * @header Authorization Bearer
+
+    * @return \Illuminate\Http\Response
+    */
 
     public function resend_otp(Request $request)
     {

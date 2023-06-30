@@ -10,7 +10,7 @@ use App\Http\Requests\UpdateInvoiceRequest;
 class InvoiceController extends Controller
 {
     /**
-     * Display a listing of the resource.
+
      *
      * @return \Illuminate\Http\Response
      */
@@ -20,6 +20,8 @@ class InvoiceController extends Controller
     }
 
     /**
+     * @bodyParam invoice_code string required A generated invoice string from frontend. Example: 90909080809
+     * @bodyParam type string required
      * Store a newly created resource in storage.
      *
      * @param  \App\Http\Requests\StoreInvoiceRequest  $request
@@ -28,10 +30,61 @@ class InvoiceController extends Controller
     public function store(StoreInvoiceRequest $request)
     {
         //
+
+        if ($request->type == 'initialize') {
+            # code...
+
+            $genratedInvoice = Invoice::updateOrCreate([
+                'user_id' => $request->user()->id,
+                'invoice_code' => $request->invoice_code
+            ],[
+                'user_id' => $request->user()->id,
+                'invoice_code' => $request->invoice_code
+            ]);
+
+            return $genratedInvoice;
+        }
+
+
     }
 
     /**
-     * Display the specified resource.
+     * Initialize an invoice
+     *
+     * @header Authorization Bearer
+     * @bodyParam invoice_code string required A generated invoice string from frontend. Example: 90909080809
+     * @bodyParam type string required
+     * Store a newly created resource in storage.
+     *
+     * @param  \App\Http\Requests\StoreInvoiceRequest  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function initializeInvoice(StoreInvoiceRequest $request)
+    {
+        //
+
+        if ($request->type == 'initialize') {
+            # code...
+
+            $genratedInvoice = Invoice::updateOrCreate([
+                'user_id' => $request->user()->id,
+                'invoice_code' => $request->invoice_code
+            ],[
+                'user_id' => $request->user()->id,
+                'invoice_code' => $request->invoice_code
+            ]);
+
+            return $genratedInvoice;
+        }
+
+
+    }
+
+
+
+
+    /**
+
      *
      * @param  \App\Models\Invoice  $invoice
      * @return \Illuminate\Http\Response
@@ -42,7 +95,7 @@ class InvoiceController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+
      *
      * @param  \App\Http\Requests\UpdateInvoiceRequest  $request
      * @param  \App\Models\Invoice  $invoice
@@ -54,7 +107,7 @@ class InvoiceController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+
      *
      * @param  \App\Models\Invoice  $invoice
      * @return \Illuminate\Http\Response
