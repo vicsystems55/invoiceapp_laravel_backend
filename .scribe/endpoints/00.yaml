@@ -26,27 +26,27 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: voluptatem
+        example: minus
         type: string
         custom: []
       email:
         name: email
         description: ''
         required: true
-        example: kuvalis.kaitlin@example.net
+        example: ffeil@example.com
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: 'Jr64HSrTd}%W+Ov`1/iO'
+        example: 'JHgNPa4a4+*+'
         type: string
         custom: []
     cleanBodyParameters:
-      name: voluptatem
-      email: kuvalis.kaitlin@example.net
-      password: 'Jr64HSrTd}%W+Ov`1/iO'
+      name: minus
+      email: ffeil@example.com
+      password: 'JHgNPa4a4+*+'
     fileParameters: []
     responses: []
     responseFields: []
@@ -80,19 +80,19 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: amya56@example.com
+        example: monahan.myah@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: 'rjnvK|Ao6q=<"2ML'
+        example: '5rK(}HC8>{@6s'
         type: string
         custom: []
     cleanBodyParameters:
-      email: amya56@example.com
-      password: 'rjnvK|Ao6q=<"2ML'
+      email: monahan.myah@example.net
+      password: '5rK(}HC8>{@6s'
     fileParameters: []
     responses: []
     responseFields: []
@@ -127,11 +127,11 @@ endpoints:
         name: otp
         description: ''
         required: true
-        example: accusamus
+        example: et
         type: string
         custom: []
     cleanBodyParameters:
-      otp: accusamus
+      otp: et
     fileParameters: []
     responses: []
     responseFields: []
@@ -197,21 +197,21 @@ endpoints:
         name: b_name
         description: ''
         required: true
-        example: a
+        example: corporis
         type: string
         custom: []
       b_address:
         name: b_address
         description: ''
         required: true
-        example: et
+        example: omnis
         type: string
         custom: []
       b_phone:
         name: b_phone
         description: ''
         required: true
-        example: debitis
+        example: nemo
         type: string
         custom: []
       b_logo:
@@ -225,14 +225,14 @@ endpoints:
         name: b_cac_no
         description: ''
         required: false
-        example: non
+        example: ipsum
         type: string
         custom: []
       b_description:
         name: b_description
         description: ''
         required: true
-        example: omnis
+        example: aliquid
         type: string
         custom: []
       b_sign:
@@ -243,11 +243,11 @@ endpoints:
         type: file
         custom: []
     cleanBodyParameters:
-      b_name: a
-      b_address: et
-      b_phone: debitis
-      b_cac_no: non
-      b_description: omnis
+      b_name: corporis
+      b_address: omnis
+      b_phone: nemo
+      b_cac_no: ipsum
+      b_description: aliquid
     fileParameters:
       b_logo: null
       b_sign: null
@@ -284,7 +284,7 @@ endpoints:
         name: business_profile_id
         description: ''
         required: true
-        example: 10
+        example: 1
         type: integer
         custom: []
       image:
@@ -305,13 +305,13 @@ endpoints:
         name: description
         description: ''
         required: true
-        example: 'Harum officia magni iste.'
+        example: 'Nemo animi corrupti nam optio architecto animi.'
         type: string
         custom: []
     cleanBodyParameters:
-      business_profile_id: 10
+      business_profile_id: 1
       price: 430430434.34
-      description: 'Harum officia magni iste.'
+      description: 'Nemo animi corrupti nam optio architecto animi.'
     fileParameters:
       image: null
     responses: []
@@ -354,12 +354,12 @@ endpoints:
         name: type
         description: 'Store a newly created resource in storage.'
         required: true
-        example: voluptatibus
+        example: nemo
         type: string
         custom: []
     cleanBodyParameters:
       invoice_code: '90909080809'
-      type: voluptatibus
+      type: nemo
     fileParameters: []
     responses: []
     responseFields: []
@@ -401,28 +401,28 @@ endpoints:
         name: billable_item_id
         description: ''
         required: true
-        example: 5
+        example: 14
         type: integer
         custom: []
       qty:
         name: qty
         description: ''
         required: true
-        example: 20
+        example: 7
         type: integer
         custom: []
       price:
         name: price
         description: ''
         required: false
-        example: 38351636.380541
+        example: 1.234
         type: number
         custom: []
     cleanBodyParameters:
       invoice_code: '90909080809'
-      billable_item_id: 5
-      qty: 20
-      price: 38351636.380541
+      billable_item_id: 14
+      qty: 7
+      price: 1.234
     fileParameters: []
     responses: []
     responseFields: []

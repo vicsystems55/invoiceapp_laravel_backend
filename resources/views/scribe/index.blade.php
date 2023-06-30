@@ -26,7 +26,7 @@
             </style>
 
     <script>
-        var tryItOutBaseUrl = "http://localhost:5001";
+        var tryItOutBaseUrl = "https://invoiceapp.vicsystems.com.ng";
         var useCsrf = Boolean();
         var csrfUrl = "/sanctum/csrf-cookie";
     </script>
@@ -115,7 +115,7 @@
     <div class="content">
         <h1 id="introduction">Introduction</h1>
 <aside>
-    <strong>Base URL</strong>: <code>http://localhost:5001</code>
+    <strong>Base URL</strong>: <code>https://invoiceapp.vicsystems.com.ng</code>
 </aside>
 <p>This documentation aims to provide all the information you need to work with our API.</p>
 <aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
@@ -141,20 +141,20 @@ You can switch the language used with the tabs at the top right (or from the nav
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:5001/api/v1/register" \
+    "https://invoiceapp.vicsystems.com.ng/api/v1/register" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"voluptatem\",
-    \"email\": \"kuvalis.kaitlin@example.net\",
-    \"password\": \"Jr64HSrTd}%W+Ov`1\\/iO\"
+    \"name\": \"minus\",
+    \"email\": \"ffeil@example.com\",
+    \"password\": \"JHgNPa4a4+*+\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:5001/api/v1/register"
+    "https://invoiceapp.vicsystems.com.ng/api/v1/register"
 );
 
 const headers = {
@@ -163,9 +163,9 @@ const headers = {
 };
 
 let body = {
-    "name": "voluptatem",
-    "email": "kuvalis.kaitlin@example.net",
-    "password": "Jr64HSrTd}%W+Ov`1\/iO"
+    "name": "minus",
+    "email": "ffeil@example.com",
+    "password": "JHgNPa4a4+*+"
 };
 
 fetch(url, {
@@ -254,10 +254,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="name"                data-endpoint="POSTapi-v1-register"
-               value="voluptatem"
+               value="minus"
                data-component="body">
     <br>
-<p>Example: <code>voluptatem</code></p>
+<p>Example: <code>minus</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -265,10 +265,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-v1-register"
-               value="kuvalis.kaitlin@example.net"
+               value="ffeil@example.com"
                data-component="body">
     <br>
-<p>Example: <code>kuvalis.kaitlin@example.net</code></p>
+<p>Example: <code>ffeil@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -276,10 +276,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="password"                data-endpoint="POSTapi-v1-register"
-               value="Jr64HSrTd}%W+Ov`1/iO"
+               value="JHgNPa4a4+*+"
                data-component="body">
     <br>
-<p>Example: <code>Jr64HSrTd}%W+Ov</code>1/iO`</p>
+<p>Example: <code>JHgNPa4a4+*+</code></p>
         </div>
         </form>
 
@@ -296,19 +296,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:5001/api/v1/login" \
+    "https://invoiceapp.vicsystems.com.ng/api/v1/login" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"amya56@example.com\",
-    \"password\": \"rjnvK|Ao6q=&lt;\\\"2ML\"
+    \"email\": \"monahan.myah@example.net\",
+    \"password\": \"5rK(}HC8&gt;{@6s\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:5001/api/v1/login"
+    "https://invoiceapp.vicsystems.com.ng/api/v1/login"
 );
 
 const headers = {
@@ -317,8 +317,8 @@ const headers = {
 };
 
 let body = {
-    "email": "amya56@example.com",
-    "password": "rjnvK|Ao6q=&lt;\"2ML"
+    "email": "monahan.myah@example.net",
+    "password": "5rK(}HC8&gt;{@6s"
 };
 
 fetch(url, {
@@ -407,10 +407,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="email"                data-endpoint="POSTapi-v1-login"
-               value="amya56@example.com"
+               value="monahan.myah@example.net"
                data-component="body">
     <br>
-<p>Example: <code>amya56@example.com</code></p>
+<p>Example: <code>monahan.myah@example.net</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -418,10 +418,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="password"                data-endpoint="POSTapi-v1-login"
-               value="rjnvK|Ao6q=<"2ML"
+               value="5rK(}HC8>{@6s"
                data-component="body">
     <br>
-<p>Example: <code>rjnvK|Ao6q=&lt;"2ML</code></p>
+<p>Example: <code>5rK(}HC8&gt;{@6s</code></p>
         </div>
         </form>
 
@@ -438,19 +438,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:5001/api/v1/verify-otp" \
+    "https://invoiceapp.vicsystems.com.ng/api/v1/verify-otp" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --header "Authorization: Bearer" \
     --data "{
-    \"otp\": \"accusamus\"
+    \"otp\": \"et\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:5001/api/v1/verify-otp"
+    "https://invoiceapp.vicsystems.com.ng/api/v1/verify-otp"
 );
 
 const headers = {
@@ -460,7 +460,7 @@ const headers = {
 };
 
 let body = {
-    "otp": "accusamus"
+    "otp": "et"
 };
 
 fetch(url, {
@@ -560,10 +560,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="otp"                data-endpoint="POSTapi-v1-verify-otp"
-               value="accusamus"
+               value="et"
                data-component="body">
     <br>
-<p>Example: <code>accusamus</code></p>
+<p>Example: <code>et</code></p>
         </div>
         </form>
 
@@ -580,7 +580,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:5001/api/v1/resend-otp" \
+    "https://invoiceapp.vicsystems.com.ng/api/v1/resend-otp" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --header "Authorization: Bearer"</code></pre></div>
@@ -588,7 +588,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:5001/api/v1/resend-otp"
+    "https://invoiceapp.vicsystems.com.ng/api/v1/resend-otp"
 );
 
 const headers = {
@@ -701,22 +701,22 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:5001/api/v1/create/business-profile" \
+    "https://invoiceapp.vicsystems.com.ng/api/v1/create/business-profile" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
     --header "Authorization: Bearer" \
-    --form "b_name=a" \
-    --form "b_address=et" \
-    --form "b_phone=debitis" \
-    --form "b_cac_no=non" \
-    --form "b_description=omnis" \
-    --form "b_logo=@C:\Users\user\AppData\Local\Temp\php265C.tmp" \
-    --form "b_sign=@C:\Users\user\AppData\Local\Temp\php265D.tmp" </code></pre></div>
+    --form "b_name=corporis" \
+    --form "b_address=omnis" \
+    --form "b_phone=nemo" \
+    --form "b_cac_no=ipsum" \
+    --form "b_description=aliquid" \
+    --form "b_logo=@C:\Users\user\AppData\Local\Temp\php1962.tmp" \
+    --form "b_sign=@C:\Users\user\AppData\Local\Temp\php1963.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:5001/api/v1/create/business-profile"
+    "https://invoiceapp.vicsystems.com.ng/api/v1/create/business-profile"
 );
 
 const headers = {
@@ -726,11 +726,11 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('b_name', 'a');
-body.append('b_address', 'et');
-body.append('b_phone', 'debitis');
-body.append('b_cac_no', 'non');
-body.append('b_description', 'omnis');
+body.append('b_name', 'corporis');
+body.append('b_address', 'omnis');
+body.append('b_phone', 'nemo');
+body.append('b_cac_no', 'ipsum');
+body.append('b_description', 'aliquid');
 body.append('b_logo', document.querySelector('input[name="b_logo"]').files[0]);
 body.append('b_sign', document.querySelector('input[name="b_sign"]').files[0]);
 
@@ -831,10 +831,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="b_name"                data-endpoint="POSTapi-v1-create-business-profile"
-               value="a"
+               value="corporis"
                data-component="body">
     <br>
-<p>Example: <code>a</code></p>
+<p>Example: <code>corporis</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>b_address</code></b>&nbsp;&nbsp;
@@ -842,10 +842,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="b_address"                data-endpoint="POSTapi-v1-create-business-profile"
-               value="et"
+               value="omnis"
                data-component="body">
     <br>
-<p>Example: <code>et</code></p>
+<p>Example: <code>omnis</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>b_phone</code></b>&nbsp;&nbsp;
@@ -853,10 +853,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="b_phone"                data-endpoint="POSTapi-v1-create-business-profile"
-               value="debitis"
+               value="nemo"
                data-component="body">
     <br>
-<p>Example: <code>debitis</code></p>
+<p>Example: <code>nemo</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>b_logo</code></b>&nbsp;&nbsp;
@@ -867,7 +867,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Example: <code>C:\Users\user\AppData\Local\Temp\php265C.tmp</code></p>
+<p>Example: <code>C:\Users\user\AppData\Local\Temp\php1962.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>b_cac_no</code></b>&nbsp;&nbsp;
@@ -875,10 +875,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                name="b_cac_no"                data-endpoint="POSTapi-v1-create-business-profile"
-               value="non"
+               value="ipsum"
                data-component="body">
     <br>
-<p>Example: <code>non</code></p>
+<p>Example: <code>ipsum</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>b_description</code></b>&nbsp;&nbsp;
@@ -886,10 +886,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="b_description"                data-endpoint="POSTapi-v1-create-business-profile"
-               value="omnis"
+               value="aliquid"
                data-component="body">
     <br>
-<p>Example: <code>omnis</code></p>
+<p>Example: <code>aliquid</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>b_sign</code></b>&nbsp;&nbsp;
@@ -900,7 +900,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Example: <code>C:\Users\user\AppData\Local\Temp\php265D.tmp</code></p>
+<p>Example: <code>C:\Users\user\AppData\Local\Temp\php1963.tmp</code></p>
         </div>
         </form>
 
@@ -917,19 +917,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:5001/api/v1/create-billable-item" \
+    "https://invoiceapp.vicsystems.com.ng/api/v1/create-billable-item" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
     --header "Authorization: Bearer" \
-    --form "business_profile_id=10" \
+    --form "business_profile_id=1" \
     --form "price=430430434.34" \
-    --form "description=Harum officia magni iste." \
-    --form "image=@C:\Users\user\AppData\Local\Temp\php266F.tmp" </code></pre></div>
+    --form "description=Nemo animi corrupti nam optio architecto animi." \
+    --form "image=@C:\Users\user\AppData\Local\Temp\php1974.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:5001/api/v1/create-billable-item"
+    "https://invoiceapp.vicsystems.com.ng/api/v1/create-billable-item"
 );
 
 const headers = {
@@ -939,9 +939,9 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('business_profile_id', '10');
+body.append('business_profile_id', '1');
 body.append('price', '430430434.34');
-body.append('description', 'Harum officia magni iste.');
+body.append('description', 'Nemo animi corrupti nam optio architecto animi.');
 body.append('image', document.querySelector('input[name="image"]').files[0]);
 
 fetch(url, {
@@ -1041,10 +1041,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                name="business_profile_id"                data-endpoint="POSTapi-v1-create-billable-item"
-               value="10"
+               value="1"
                data-component="body">
     <br>
-<p>Example: <code>10</code></p>
+<p>Example: <code>1</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>image</code></b>&nbsp;&nbsp;
@@ -1055,7 +1055,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Example: <code>C:\Users\user\AppData\Local\Temp\php266F.tmp</code></p>
+<p>Example: <code>C:\Users\user\AppData\Local\Temp\php1974.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>price</code></b>&nbsp;&nbsp;
@@ -1074,10 +1074,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="description"                data-endpoint="POSTapi-v1-create-billable-item"
-               value="Harum officia magni iste."
+               value="Nemo animi corrupti nam optio architecto animi."
                data-component="body">
     <br>
-<p>Example: <code>Harum officia magni iste.</code></p>
+<p>Example: <code>Nemo animi corrupti nam optio architecto animi.</code></p>
         </div>
         </form>
 
@@ -1094,20 +1094,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:5001/api/v1/initialize-invoice" \
+    "https://invoiceapp.vicsystems.com.ng/api/v1/initialize-invoice" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --header "Authorization: Bearer" \
     --data "{
     \"invoice_code\": \"90909080809\",
-    \"type\": \"voluptatibus\"
+    \"type\": \"nemo\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:5001/api/v1/initialize-invoice"
+    "https://invoiceapp.vicsystems.com.ng/api/v1/initialize-invoice"
 );
 
 const headers = {
@@ -1118,7 +1118,7 @@ const headers = {
 
 let body = {
     "invoice_code": "90909080809",
-    "type": "voluptatibus"
+    "type": "nemo"
 };
 
 fetch(url, {
@@ -1229,10 +1229,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                name="type"                data-endpoint="POSTapi-v1-initialize-invoice"
-               value="voluptatibus"
+               value="nemo"
                data-component="body">
     <br>
-<p>Store a newly created resource in storage. Example: <code>voluptatibus</code></p>
+<p>Store a newly created resource in storage. Example: <code>nemo</code></p>
         </div>
         </form>
 
@@ -1249,22 +1249,22 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "http://localhost:5001/api/v1/append-to-inoice" \
+    "https://invoiceapp.vicsystems.com.ng/api/v1/append-to-inoice" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --header "Authorization: Bearer" \
     --data "{
     \"invoice_code\": \"90909080809\",
-    \"billable_item_id\": 5,
-    \"qty\": 20,
-    \"price\": 38351636.380541325
+    \"billable_item_id\": 14,
+    \"qty\": 7,
+    \"price\": 1.234
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost:5001/api/v1/append-to-inoice"
+    "https://invoiceapp.vicsystems.com.ng/api/v1/append-to-inoice"
 );
 
 const headers = {
@@ -1275,9 +1275,9 @@ const headers = {
 
 let body = {
     "invoice_code": "90909080809",
-    "billable_item_id": 5,
-    "qty": 20,
-    "price": 38351636.380541325
+    "billable_item_id": 14,
+    "qty": 7,
+    "price": 1.234
 };
 
 fetch(url, {
@@ -1388,10 +1388,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                name="billable_item_id"                data-endpoint="POSTapi-v1-append-to-inoice"
-               value="5"
+               value="14"
                data-component="body">
     <br>
-<p>Example: <code>5</code></p>
+<p>Example: <code>14</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>qty</code></b>&nbsp;&nbsp;
@@ -1399,10 +1399,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="number" style="display: none"
                name="qty"                data-endpoint="POSTapi-v1-append-to-inoice"
-               value="20"
+               value="7"
                data-component="body">
     <br>
-<p>Example: <code>20</code></p>
+<p>Example: <code>7</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>price</code></b>&nbsp;&nbsp;
@@ -1410,10 +1410,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                name="price"                data-endpoint="POSTapi-v1-append-to-inoice"
-               value="38351636.380541"
+               value="1.234"
                data-component="body">
     <br>
-<p>Example: <code>38351636.380541</code></p>
+<p>Example: <code>1.234</code></p>
         </div>
         </form>
 
