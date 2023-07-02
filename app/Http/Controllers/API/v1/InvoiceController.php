@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API\v1;
 use App\Models\Invoice;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\StoreInvoiceRequest;
 use App\Http\Requests\UpdateInvoiceRequest;
@@ -27,9 +28,13 @@ class InvoiceController extends Controller
 
 
 
-        $stored = Storage::put('public/generated_invoices/232323.pdf', $pdf->output());
+        // $stored = Storage::putFile('generated_invoices/23232888.pdf', $pdf->output());
 
-        $pdftoimg = new \Spatie\PdfToImage\Pdf(('storage/generated_invoices/232323.pdf'));
+
+
+        File::put(public_path('generated_invoices/wwewerr.pdf'), $pdf->output());
+
+        $pdftoimg = new \Spatie\PdfToImage\Pdf(public_path('generated_invoices/wwewerr.pdf'));
 
         $pdftoimg->saveImage('converted/');
 
