@@ -36,7 +36,7 @@ class InvoiceController extends Controller
 
         $pdftoimg = new \Spatie\PdfToImage\Pdf(public_path('generated_invoices/wwewerr.pdf'));
 
-        $pdftoimg->saveImage('converted/');
+        $pdftoimg->saveImage('converted');
 
 
         // return $pdf->download('invoice.pdf');
