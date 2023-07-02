@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API\v1;
 use App\Models\Invoice;
+use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
@@ -16,7 +17,7 @@ class InvoiceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function exportPDF()
+    public function exportPDF(Request $request)
     {
         //
 
@@ -34,11 +35,11 @@ class InvoiceController extends Controller
 
 
 
-        File::put(public_path('generated_invoices/wwewerr.pdf'), $pdf->output());
+        File::put(public_path('generated_invoices/'.$request->invoiceCode.'.pdf'), $pdf->output());
 
-        $pdftoimg = new \Spatie\PdfToImage\Pdf(public_path('generated_invoices/wwewerr.pdf'));
+        $pdftoimg = new \Spatie\PdfToImage\Pdf(public_path('generated_invoices/'.$request->invoiceCode.'.pdf'));
 
-        $pdftoimg->saveImage(public_path('converted/wwewerr.png'));
+        $pdftoimg->saveImage(public_path('converted/'.$request->invoiceCode.'.png'));
 
 
         // return $pdf->download('invoice.pdf');
