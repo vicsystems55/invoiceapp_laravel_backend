@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\API\v1;
-use App\Http\Controllers\Controller;
-
 use App\Models\Invoice;
+use Barryvdh\DomPDF\Facade\Pdf;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\StoreInvoiceRequest;
 use App\Http\Requests\UpdateInvoiceRequest;
 
@@ -14,9 +15,29 @@ class InvoiceController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function exportPDF()
     {
         //
+
+        // return 1234;
+
+        $pdf = Pdf::loadView('pdf.invoice');
+        // compact('data','user', 'logo', 'css_file' )
+        // )->setPaper('a4', 'portrait');
+
+
+
+        $stored = Storage::put('public/generated_invoices/232323.pdf', $pdf->output());
+
+
+
+        $pdftoimg = new \Spatie\PdfToImage\Pdf('public/generated_invoices/232323.pdf');
+
+        $pdftoimg->saveImage('converted/');
+
+
+        // return $pdf->download('invoice.pdf');
+
     }
 
     /**
