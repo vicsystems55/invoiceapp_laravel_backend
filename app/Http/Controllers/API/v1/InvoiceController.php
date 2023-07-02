@@ -29,7 +29,7 @@ class InvoiceController extends Controller
 
         $stored = Storage::put('public/generated_invoices/232323.pdf', $pdf->output());
 
-        $pdftoimg = new \Spatie\PdfToImage\Pdf('public/generated_invoices/232323.pdf');
+        $pdftoimg = new \Spatie\PdfToImage\Pdf(url('public/generated_invoices/232323.pdf'));
 
         $pdftoimg->saveImage('converted/');
 
