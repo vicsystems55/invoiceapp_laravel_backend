@@ -32,6 +32,8 @@ class InvoiceController extends Controller
 
 
 
+        
+
         File::put(public_path('generated_invoices/wwewerr.pdf'), $pdf->output());
 
         $pdftoimg = new \Spatie\PdfToImage\Pdf(public_path('generated_invoices/wwewerr.pdf'));
