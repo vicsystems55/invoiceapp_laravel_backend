@@ -39,6 +39,8 @@ class BusinessProfileController extends Controller
    {
        //
 
+       return $request->all();
+
        $businessProfile = BusinessProfile::create([
         'user_id' => $request->user()->id,
         'b_name' => $request->b_name,
