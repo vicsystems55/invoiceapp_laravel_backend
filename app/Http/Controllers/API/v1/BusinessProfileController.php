@@ -39,7 +39,16 @@ class BusinessProfileController extends Controller
    {
        //
 
-    if ($request->type == 'b_logo') {
+       $request->validate([
+
+        'b_logo' => 'required',
+        'b_signature' => 'required',
+        'b_name' => 'required|unique:business_profiles',
+        'b_address' => 'required',
+        'b_phone' => 'required',
+       ]);
+
+    if ($request->file('b_logo')) {
         # code...
         $doc = $request->file('b_logo');
 
@@ -49,7 +58,7 @@ class BusinessProfileController extends Controller
 
     }
 
-    if ($request->type == 'b_signature') {
+    if ($request->file('b_signature')) {
         # code...
         $doc1 = $request->file('b_signature');
 
