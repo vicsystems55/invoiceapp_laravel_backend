@@ -39,18 +39,40 @@ class BusinessProfileController extends Controller
    {
        //
 
-       return $request->all();
+    if ($request->type == 'b_logo') {
+        # code...
+        $doc = $request->file('b_logo');
+
+        $new_name = rand().".".$doc->getClientOriginalExtension();
+
+        $doc->move(public_path('business_logos'), $new_name);
+
+    }
+
+    if ($request->type == 'b_signature') {
+        # code...
+        $doc1 = $request->file('b_signature');
+
+        $new_name1 = rand().".".$doc1->getClientOriginalExtension();
+
+        $doc1->move(public_path('business_signatures'), $new_name1);
+
+    }
+
+
+    //    return $request->all();
 
        $businessProfile = BusinessProfile::create([
         'user_id' => $request->user()->id,
         'b_name' => $request->b_name,
         'b_address' => $request->b_address,
         'b_phone' => $request->b_phone,
-        // 'b_logo' => $request->b_logo,
+        'b_logo' => $new_name,
         'b_cac_no' => $request->b_cac_no,
         'b_description' => $request->b_description,
-        // 'b_sign' => $request->b_sign,
+        'b_sign' => $new_name1,
        ]);
+
 
        return $businessProfile;
 
