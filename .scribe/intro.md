@@ -3,7 +3,7 @@
 
 
 <aside>
-    <strong>Base URL</strong>: <code>https://invoiceapp.vicsystems.com.ng</code>
+    <strong>Base URL</strong>: <code>https://localhost:5001</code>
 </aside>
 
 This documentation aims to provide all the information you need to work with our API.

@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\API\v1;
-use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 
 use App\Models\BusinessProfile;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreBusinessProfileRequest;
 use App\Http\Requests\UpdateBusinessProfileRequest;
 
@@ -15,9 +16,21 @@ class BusinessProfileController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+    /**
+    * Fetch business profiles
+    *
+    * @header Authorization Bearer
+
+
+    * @param  \App\Http\Requests\StoreBusinessProfileRequest  $request
+    * @return \Illuminate\Http\Response
+    */
+
+        $business_profiles = BusinessProfile::where('user_id', $request->user()->id)->latest()->get();
+
+        return $business_profiles;
     }
 
     /**
@@ -43,8 +56,8 @@ class BusinessProfileController extends Controller
 
        $request->validate([
 
-        'b_logo' => 'required',
-        'b_signature' => 'required',
+        'b_logo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        'b_signature' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         'b_description' => 'required',
         'b_name' => 'required|unique:business_profiles',
         'b_address' => 'required',

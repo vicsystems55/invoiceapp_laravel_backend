@@ -41,6 +41,8 @@ Route::group([
 
         Route::post('/create/business-profile', [BusinessProfileController::class, 'createProfile'])->middleware('auth:sanctum');
 
+        Route::get('/business-profiles', [BusinessProfileController::class, 'index'])->middleware('auth:sanctum');
+
         Route::post('/create-billable-item', [BillableItemController::class, 'createBillableItem'])->middleware('auth:sanctum');
 
         Route::post('/initialize-invoice', [InvoiceController::class, 'initializeInvoice'])->middleware('auth:sanctum');
@@ -51,7 +53,7 @@ Route::group([
 
 
 
-        
+
 
 
     });
