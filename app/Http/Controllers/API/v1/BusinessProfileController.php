@@ -39,6 +39,8 @@ class BusinessProfileController extends Controller
    {
        //
 
+       return $request->all();
+
        $request->validate([
 
         'b_logo' => 'required',
