@@ -39,12 +39,13 @@ class BusinessProfileController extends Controller
    {
        //
 
-       return $request->all();
+    //    return $request->all();
 
        $request->validate([
 
         'b_logo' => 'required',
         'b_signature' => 'required',
+        'b_description' => 'required',
         'b_name' => 'required|unique:business_profiles',
         'b_address' => 'required',
         'b_phone' => 'required',
