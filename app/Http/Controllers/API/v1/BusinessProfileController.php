@@ -11,13 +11,7 @@ use App\Http\Requests\UpdateBusinessProfileRequest;
 
 class BusinessProfileController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index(Request $request)
-    {
+
     /**
     * Fetch business profiles
     *
@@ -27,6 +21,9 @@ class BusinessProfileController extends Controller
     * @param  \App\Http\Requests\StoreBusinessProfileRequest  $request
     * @return \Illuminate\Http\Response
     */
+    public function index(Request $request)
+    {
+
 
         $business_profiles = BusinessProfile::where('user_id', $request->user()->id)->latest()->get();
 
@@ -37,7 +34,7 @@ class BusinessProfileController extends Controller
     * Create a business profile
     *
     * @header Authorization Bearer
-    * @bodyParam b_name string required
+    * @bodyParam b_name string required Example: vicSystems Tech Ltd.
     * @bodyParam b_address string required
     * @bodyParam b_phone string required
     * @bodyParam b_logo file required

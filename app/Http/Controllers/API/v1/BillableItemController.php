@@ -26,9 +26,20 @@ class BillableItemController extends Controller
     {
         //
 
+            if ($request->file('billable_item_image')) {
+        # code...
+        $doc = $request->file('billable_item_image');
+
+        $new_name = rand().".".$doc->getClientOriginalExtension();
+
+        $doc->move(public_path('billable_items_images'), $new_name);
+
+    }
+
         $billableItem = BillableItem::updateOrCreate([
             'user_id' => $request->user()->id,
             'business_profile_id' => $request->business_profile_id,
+            'image' => $new_name,
             'price' => $request->price,
             'description' => $request->description
         ]);

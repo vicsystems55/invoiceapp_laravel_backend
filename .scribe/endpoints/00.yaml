@@ -26,27 +26,27 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: ea
+        example: numquam
         type: string
         custom: []
       email:
         name: email
         description: ''
         required: true
-        example: bria.oberbrunner@example.net
+        example: tgoldner@example.org
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: )JJgSWc0HNG1Rna!6s;P
+        example: '/OnEy"iPLfGY,o'
         type: string
         custom: []
     cleanBodyParameters:
-      name: ea
-      email: bria.oberbrunner@example.net
-      password: )JJgSWc0HNG1Rna!6s;P
+      name: numquam
+      email: tgoldner@example.org
+      password: '/OnEy"iPLfGY,o'
     fileParameters: []
     responses: []
     responseFields: []
@@ -80,19 +80,19 @@ endpoints:
         name: email
         description: ''
         required: true
-        example: okiehn@example.com
+        example: rempel.aaliyah@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: '3<kC]YIjX4t&ww{tON(q'
+        example: '%;)tjm$hh)`{8L'
         type: string
         custom: []
     cleanBodyParameters:
-      email: okiehn@example.com
-      password: '3<kC]YIjX4t&ww{tON(q'
+      email: rempel.aaliyah@example.net
+      password: '%;)tjm$hh)`{8L'
     fileParameters: []
     responses: []
     responseFields: []
@@ -127,11 +127,11 @@ endpoints:
         name: otp
         description: ''
         required: true
-        example: distinctio
+        example: adipisci
         type: string
         custom: []
     cleanBodyParameters:
-      otp: distinctio
+      otp: adipisci
     fileParameters: []
     responses: []
     responseFields: []
@@ -211,35 +211,35 @@ endpoints:
         name: b_description
         description: ''
         required: true
-        example: ex
+        example: expedita
         type: string
         custom: []
       b_name:
         name: b_name
         description: ''
         required: true
-        example: odit
+        example: 'vicSystems Tech Ltd.'
         type: string
         custom: []
       b_address:
         name: b_address
         description: ''
         required: true
-        example: pariatur
+        example: recusandae
         type: string
         custom: []
       b_phone:
         name: b_phone
         description: ''
         required: true
-        example: vel
+        example: ipsa
         type: string
         custom: []
       b_cac_no:
         name: b_cac_no
         description: ''
         required: false
-        example: velit
+        example: sapiente
         type: string
         custom: []
       b_sign:
@@ -250,11 +250,11 @@ endpoints:
         type: file
         custom: []
     cleanBodyParameters:
-      b_description: ex
-      b_name: odit
-      b_address: pariatur
-      b_phone: vel
-      b_cac_no: velit
+      b_description: expedita
+      b_name: 'vicSystems Tech Ltd.'
+      b_address: recusandae
+      b_phone: ipsa
+      b_cac_no: sapiente
     fileParameters:
       b_logo: null
       b_signature: null
@@ -275,13 +275,14 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Display a listing of the resource.'
+      title: 'Fetch business profiles'
       description: ''
       authenticated: false
       custom: []
     headers:
       Content-Type: application/json
       Accept: application/json
+      Authorization: Bearer
     urlParameters: []
     cleanUrlParameters: []
     queryParameters: []
@@ -331,7 +332,7 @@ endpoints:
         name: business_profile_id
         description: ''
         required: true
-        example: 14
+        example: 5
         type: integer
         custom: []
       image:
@@ -352,13 +353,13 @@ endpoints:
         name: description
         description: ''
         required: true
-        example: 'Nobis libero eligendi veritatis voluptates quidem.'
+        example: 'Optio perferendis quam eos omnis quisquam eveniet.'
         type: string
         custom: []
     cleanBodyParameters:
-      business_profile_id: 14
+      business_profile_id: 5
       price: 430430434.34
-      description: 'Nobis libero eligendi veritatis voluptates quidem.'
+      description: 'Optio perferendis quam eos omnis quisquam eveniet.'
     fileParameters:
       image: null
     responses: []
@@ -401,12 +402,12 @@ endpoints:
         name: type
         description: 'Store a newly created resource in storage.'
         required: true
-        example: provident
+        example: aut
         type: string
         custom: []
     cleanBodyParameters:
       invoice_code: '90909080809'
-      type: provident
+      type: aut
     fileParameters: []
     responses: []
     responseFields: []
@@ -448,28 +449,28 @@ endpoints:
         name: billable_item_id
         description: ''
         required: true
-        example: 12
+        example: 8
         type: integer
         custom: []
       qty:
         name: qty
         description: ''
         required: true
-        example: 4
+        example: 15
         type: integer
         custom: []
       price:
         name: price
         description: ''
         required: false
-        example: 394648447.21244
+        example: 343.995
         type: number
         custom: []
     cleanBodyParameters:
       invoice_code: '90909080809'
-      billable_item_id: 12
-      qty: 4
-      price: 394648447.21244
+      billable_item_id: 8
+      qty: 15
+      price: 343.995
     fileParameters: []
     responses: []
     responseFields: []

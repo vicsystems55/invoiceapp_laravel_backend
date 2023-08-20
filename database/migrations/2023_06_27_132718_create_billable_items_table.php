@@ -19,6 +19,7 @@ class CreateBillableItemsTable extends Migration
             $table->foreignId('business_profile_id')->nullable();
             $table->string('image')->nullable();
             $table->decimal('price', 9,2)->default(0);
+            $table->string('name')->nullable();
             $table->longText('description');
             $table->timestamps();
         });
