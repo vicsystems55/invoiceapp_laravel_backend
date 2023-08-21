@@ -47,6 +47,15 @@ class BillableItemController extends Controller
         return $billableItem;
     }
 
+    public function billableItems(Request $request){
+
+
+        $billableItems = BillableItem::where('user_id', $request->user()->id)->latest()->get();
+
+        return $billableItems;
+
+    }
+
     /**
      * Store a newly created resource in storage.
      *
