@@ -12,8 +12,18 @@ use App\Http\Requests\UpdateInvoiceRequest;
 
 class InvoiceController extends Controller
 {
-    /**
 
+    public function createInvoice(Request $request){
+
+        // billable items
+        // invoice id
+        
+
+
+
+    }
+
+    /**
      *
      * @return \Illuminate\Http\Response
      */

@@ -49,6 +49,8 @@ Route::group([
 
         Route::post('/initialize-invoice', [InvoiceController::class, 'initializeInvoice'])->middleware('auth:sanctum');
 
+        Route::post('/create-invoice', [InvoiceController::class, 'initializeInvoice'])->middleware('auth:sanctum');
+
         Route::post('/append-to-inoice', [InvoiceItemController::class, 'appendToInvoice'])->middleware('auth:sanctum');
 
         Route::get('/invoice/export/pdf', [InvoiceController::class, 'exportPDF']);
